@@ -1,0 +1,25 @@
+{
+  "name": "Chrome Code Runner",
+  "description" : "Dev Tools Code Editor for injecting  code on a host domain",
+  "version": "1.0",
+  "manifest_version": 2,
+  "devtools_page": "index.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "injected.js",
+    "injected.build.js",
+    "panel.js",
+    "panel.build.js"
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "webNavigation"
+  ]
+}
