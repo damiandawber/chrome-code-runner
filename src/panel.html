@@ -3,21 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror/theme/cobalt.css">
     <link rel="stylesheet" href="app.css">
     <title>Chrome Code Runner</title>
   </head>
   <body>
     <div id="ccr-root">
-      <div>
-        <label>JavaScript</label>
-        <textarea name="ccr-js-textarea" id="ccr-js-textarea"></textarea>
+      <div class="ccr-header">
+        <img class="ccr-header__logo" src="ccr-logo-green.png" alt="CCR">
+        <button class="btn btn--yellow ccr-header__init">Run</button>
       </div>
-      <div>
-        <label>CSS</label>
-        <textarea name="ccr-css-textarea" id="ccr-css-textarea"></textarea>
+
+      <div class="ccr-cols">
+        <div class="ccr-cols__col ccr-js-wrapper">
+          <label class="sr-only">JavaScript</label>
+          <textarea name="ccr-js-textarea" id="ccr-js-textarea"></textarea>
+        </div>
+
+        <div class="ccr-cols__col ccr-css-wrapper">
+          <label class="sr-only">CSS</label>
+          <textarea name="ccr-css-textarea" id="ccr-css-textarea"></textarea>
+        </div>
       </div>
     </div>
 
+    <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="codemirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
     <script type="text/javascript" src="panel.build.js"></script>
   </body>
 </html>

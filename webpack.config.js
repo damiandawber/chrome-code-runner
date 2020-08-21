@@ -23,6 +23,11 @@ module.exports = {
           globOptions: {
             ignore: ['**/lib/**/*']
           }
+        },
+        { 
+          // Code Mirror CSS
+          from: 'node_modules/codemirror/',
+          to: path.resolve(__dirname, 'dist/codemirror'),
         }
       ],
     })
